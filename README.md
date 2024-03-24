@@ -5,4 +5,4 @@ Group Name: Group 11
 
 Team Members: _, _
 
-Project Manager: saloniv2, _
+Project Manager: saloniv2, vanir2
