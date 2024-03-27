@@ -22,7 +22,7 @@ import HomeScreen from './src/screens/HomeScreen'
 const App = () => {
   return (
     <SafeAreaView style={styles.root}>
-      <SignUpScreen></SignUpScreen>
+      <SignInScreen></SignInScreen>
     </SafeAreaView>
 
   );
