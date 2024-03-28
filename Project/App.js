@@ -13,6 +13,8 @@ import SignInScreen from './src/screens/Sign In Screen/SignInScreen';
 import SignUpScreen from './src/screens/Sign Up Screen/SignUpScreen';
 import BottomTab from  './src/navigations/BottomTabBar';
 import HomeScreen from './src/screens/HomeScreen'
+import ProfileScreen from './src/screens/ProfileScreen/ProfileScreen'
+import Navigation from './src/navigations/Navigation'
 
 
 
@@ -23,7 +25,7 @@ import HomeScreen from './src/screens/HomeScreen'
 const App = () => {
   return (
     <SafeAreaView style={styles.root}>
-      <SignInScreen></SignInScreen>
+      <Navigation />
     </SafeAreaView>
 
   );

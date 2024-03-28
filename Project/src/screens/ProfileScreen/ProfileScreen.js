@@ -5,7 +5,7 @@ import CustomInput from '../../components/CustomInput';
 import CustomButton from '../../components/CustomButton';
 
 
-const ProfileScreen =() => {
+const ProfileScreen = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     
