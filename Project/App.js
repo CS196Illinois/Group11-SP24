@@ -7,6 +7,7 @@
  */
 
 import React from 'react';
+import 'react-native-gesture-handler'
 import {SafeAreaView, StyleSheet, Text} from 'react-native';
 import SignInScreen from './src/screens/Sign In Screen/SignInScreen';
 import SignUpScreen from './src/screens/Sign Up Screen/SignUpScreen';
