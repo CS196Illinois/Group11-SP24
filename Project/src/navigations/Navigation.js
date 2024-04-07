@@ -13,8 +13,9 @@ const TopTabs = createMaterialTopTabNavigator();
 function TopTabsGroup() {
     return (
         <TopTabs.Navigator>
-            <TopTabs.Screen name ="Create" component={CreateScreen}/>
             <TopTabs.Screen name ="Join" component={JoinScreen}/>
+            <TopTabs.Screen name ="Create" component={CreateScreen}/>
+            
         </TopTabs.Navigator>
     )
 }
