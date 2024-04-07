@@ -1,16 +1,17 @@
 import React, {useState} from 'react'
-import {View, Text, Image, StyleSheet, useWindowDimensions} from 'react-native'
+import {View, Text, Image, StyleSheet, useWindowDimensions, TouchableOpacity} from 'react-native'
 import ProfilePic from '../../../assets/images/refProfilePic.jpg';
 import CustomInput from '../../components/CustomInput';
 import CustomButton from '../../components/CustomButton';
 
+import accountIcon from '../../../assets/images/ProfileIcon.jpg'
 
 const ProfileScreen = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     
-    const onSignInPressed = () => {
-        console.warn("Sign In")
+    const onAccountPressed = () => {
+        console.warn("Account")
     }
 
     const onForgotPasswordPressed = () => {
@@ -35,6 +36,47 @@ const ProfileScreen = () => {
                 Username
             </Text>
 
+            <TouchableOpacity style={styles.buttonSection}>
+                <View style={styles.buttonArea}>
+                <View style={styles.iconArea}>
+                        
+                </View>
+                <Text style={styles.buttonText}>Friends</Text>
+                </View>
+                <View style={styles.space}></View>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.buttonSection}>
+                <View style={styles.buttonArea}>
+                <View style={styles.iconArea}>
+                        
+                </View>
+                <Text style={styles.buttonText}>Preferences</Text>
+                </View>
+                <View style={styles.space}></View>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.buttonSection}>
+                <View style={styles.buttonArea}>
+                <View style={styles.iconArea}>
+                        
+                </View>
+                <Text style={styles.buttonText}>Account</Text>
+                </View>
+                <View style={styles.space}></View>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.buttonSection}>
+                <View style={styles.buttonArea}>
+                <View style={styles.iconArea}>
+                        
+                </View>
+                <Text style={styles.buttonText}>Log Out</Text>
+                </View>
+                <View style={styles.space}></View>
+            </TouchableOpacity>
+           
+
         </View>
     );
 };
@@ -56,6 +98,37 @@ const styles = StyleSheet.create({
         fontSize: 30,
         fontWeight: 'bold',
         color: '#1B1B1B',
+    },
+
+    buttonSection: {
+        padding: 15,
+        marginTop: 20,
+    },
+
+    buttonArea: {
+        flexDirection: 'row',
+    },
+
+
+    iconArea: {
+
+    },
+
+    iconStyle: {
+
+    },
+
+    buttonText: {
+        width: 250,
+        color: 'black',
+        fontSize: 20,
+    },
+
+    space: {
+        width:300,
+        marginTop: 10,
+        height: 0.5,
+        backgroundColor: 'black',
     },
 })
 
