@@ -9,12 +9,17 @@ import CustomInput from './components/CustomInput';
 
 
 
+
+
+
 const CreateScreen = () => {
     const [groupName, setGroupName] = useState('');
+    const [groupSize, setGroupSize] = useState('');
+    const [groupLoc, setGroupLoc] = useState('');
     
 
     const onCreateGroupPressed = () => {
-        console.warn("Create Group")
+        console.warn("Create Group");
     }
     return (
         <View>
@@ -28,14 +33,14 @@ const CreateScreen = () => {
                 />
                 <CustomInput 
                 placeholder="Group Size" 
-                value={groupName} 
-                setValue={setGroupName} 
+                value={groupSize} 
+                setValue={setGroupSize} 
                 />
 
                 <CustomInput 
                 placeholder="Location" 
-                value={groupName} 
-                setValue={setGroupName} 
+                value={groupLoc} 
+                setValue={setGroupLoc} 
                 />
 
                 <CustomButton text="Create Group" onPress={onCreateGroupPressed}/>

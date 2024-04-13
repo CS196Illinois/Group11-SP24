@@ -15,6 +15,7 @@ import BottomTab from  './src/navigations/BottomTabBar';
 import HomeScreen from './src/screens/HomeScreen'
 import ProfileScreen from './src/screens/ProfileScreen/ProfileScreen'
 import Navigation from './src/navigations/Navigation'
+import 'react-native-fs'
 
 
 
