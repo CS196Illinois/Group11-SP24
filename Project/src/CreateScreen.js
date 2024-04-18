@@ -1,8 +1,14 @@
 
 import React, {useState} from 'react'
-import {View, Text, StyleSheet, useWindowDimensions} from 'react-native'
+import {View, Text, StyleSheet, useWindowDimensions, Alert} from 'react-native'
 import CustomButton from './components/CustomButton';
 import CustomInput from './components/CustomInput';
+import RNFS from 'react-native-fs';
+import JoinScreen from './JoinScreen';
+import Navigation from './navigations/Navigation';
+
+
+
 
 
 
@@ -17,13 +23,23 @@ const CreateScreen = () => {
     const [groupSize, setGroupSize] = useState('');
     const [groupLoc, setGroupLoc] = useState('');
     
-
+    
     const onCreateGroupPressed = () => {
-        console.warn("Create Group");
+        
+        const updatedJSON = {
+            "name": {groupName},
+            "number": {groupSize},
+            "location": {groupLoc},
+        }
+        const dataString = JSON.stringify(updatedJSON);
+        RNFS.writeFile('../data/groups.json', dataString).then(() => Alert.alert("Saved Data")).catch((error) => console.error("Error writing file", error));
     }
+    
+   
     return (
         <View>
             <View style={styles.root}>
+                <Text>{groupName}</Text>
                 <Text style={styles.Header}>Create a Group</Text>
 
                 <CustomInput 
@@ -44,6 +60,7 @@ const CreateScreen = () => {
                 />
 
                 <CustomButton text="Create Group" onPress={onCreateGroupPressed}/>
+               <Text>{onCreateGroupPressed()}</Text>
             </View>
            
 
