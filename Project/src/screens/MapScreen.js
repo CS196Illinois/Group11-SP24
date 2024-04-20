@@ -3,42 +3,12 @@ import {View, Text, Image, StyleSheet} from 'react-native'
 import Logo from '../../assets/images/RoadieLogo.png';
 import pfp from '../../assets/images/ProfileIcon.jpg';
 
-const ProfileCard = ({ name, phone, image }) => (
-    <View style={styles.card}>
-      <Image source={image} style={styles.image} />
-      <Text style={styles.name}>{name}</Text>
-      <Text style={styles.phone}>{phone}</Text>
-    </View>
-  );
+
 
 const HomeScreen = () => {
     return (
         <View style = {StyleSheet.root}>
-            
-            <Image
-            source={Logo}
-            style={[styles.logo, ]}
-            resizeMode="contain"
-            /> 
-
-            <Text style={styles.heading}>Your Group</Text>
-            <View style={styles.profileContainer}>
-                <ProfileCard
-                    name="Jenny"
-                    phone="867-5329"
-                    image={pfp}
-                />
-                <ProfileCard
-                    name="Baku Patel"
-                    phone="217-384-1111"
-                    image={pfp}
-                />
-                <ProfileCard
-                    name="Robert J. Jones"
-                    phone="217-333-1000"
-                    image={pfp}
-                />
-            </View>
+            <Text style = {styles.heading}>Coming Soon</Text>
         </View>
     )
 }
