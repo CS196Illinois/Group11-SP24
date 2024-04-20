@@ -81,6 +81,9 @@ const styles = StyleSheet.create({
     phone: {
       fontSize: 14,
     },
+    logo: {
+        width: 400,
+    }
   });
 
 export default GroupScreen
