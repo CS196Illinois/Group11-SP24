@@ -18,21 +18,14 @@ import Navigation from './navigations/Navigation';
 
 
 
-const CreateScreen = () => {
+const CreateScreen = ({navigation}) => {
     const [groupName, setGroupName] = useState('');
     const [groupSize, setGroupSize] = useState('');
     const [groupLoc, setGroupLoc] = useState('');
     
     
     const onCreateGroupPressed = () => {
-        
-        const updatedJSON = {
-            "name": {groupName},
-            "number": {groupSize},
-            "location": {groupLoc},
-        }
-        const dataString = JSON.stringify(updatedJSON);
-        RNFS.writeFile('../data/groups.json', dataString).then(() => Alert.alert("Saved Data")).catch((error) => console.error("Error writing file", error));
+        navigation.navigate("Group");
     }
     
    
@@ -60,7 +53,6 @@ const CreateScreen = () => {
                 />
 
                 <CustomButton text="Create Group" onPress={onCreateGroupPressed}/>
-               <Text>{onCreateGroupPressed()}</Text>
             </View>
            
 

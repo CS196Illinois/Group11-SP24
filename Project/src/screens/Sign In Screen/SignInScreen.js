@@ -5,12 +5,15 @@ import CustomInput from '../../components/CustomInput';
 import CustomButton from '../../components/CustomButton';
 
 
-const SignInScreen = () => {
+
+const SignInScreen = ({ navigation }) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+
     
-    const onSignInPressed = () => {
-        console.warn("Sign In")
+    
+    const onSignInPressed = ({}) => {
+        navigation.navigate('Home');
     }
 
     const onForgotPasswordPressed = () => {
